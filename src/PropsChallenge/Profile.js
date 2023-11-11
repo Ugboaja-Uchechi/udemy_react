@@ -27,6 +27,7 @@ const getColor = (index) => {
   // from the colors array at the calculated index. If the index
   // exceeds the length of the colors array, it wraps around to
   // the beginning of the array, creating a cycling effect.
+  
   //return colors[index % colors.length]
 };
 
