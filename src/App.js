@@ -8,14 +8,23 @@ const dat = [
     car: "benz",
     shoe: "converse",
   },
-    {
+  {
     car: "audi",
     shoe: "nike",
   },
-]
+];
 
 export default function App() {
-  const data = ["React 🌙", "Next 🌙"];
+  const data = ["React", "React", "Next"];
+  const getData = {
+    React: "🍩",
+    Next: "🌙",
+  };
+
+  const getEmoji = (dat) => {
+    return getData[dat];
+  };
+
   return (
     <div className="App">
       <Props
@@ -31,6 +40,14 @@ export default function App() {
         skills={data}
       />
       <RenderingList props={dat} />
+      {data.map((item) => (
+        <div>
+          <p>
+            {item}
+            <span>{getEmoji(item)}</span>
+          </p>
+        </div>
+      ))}
     </div>
   );
 }
